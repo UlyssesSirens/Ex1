@@ -1,0 +1,27 @@
+def find_majority_element(seq):
+    n = len(seq)
+    counter=0
+    z=[]
+    for x in range(n):
+        counter=0
+        for y in range(n):
+            if seq[y]==seq[x]:
+                counter=counter+1
+        if counter>n/2:
+            z.append(seq[x])
+            return z
+        
+    return z
+    
+    
+        
+       
+        
+    
+#example input
+#seq = ["Odysseas", "Meni", "Odysseas", "Koymparos", "Odysseas", "Koymparos","Odysseas","Meni"] #output: none
+seq = ["Odysseas", "Odysseas", "Odysseas", "Koymparos", "Odysseas", "Koymparos","Odysseas","Meni"]#output: Odysseas
+
+result = find_majority_element(seq)
+
+print("The result is: ",result)
